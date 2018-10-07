@@ -1,0 +1,11 @@
+Package: SAME
+Title: Somatic mutation Association test with Measurement Errors
+Version: 0.0.0.9000
+Authors@R: person("Yang", "Liu", email = "yliu23@fredhutch.org", role = c("aut", "cre"))
+Description: Association analysis using somatic mutations. It accounts for somatic mutation calling uncertainty by modeling the true somatic mutation status as a latent variable and exploiting read count data to augment the mutation calls. Two versions of the test are provided, one for mutation-level analysis using a single somatic mutation (mSAME) and the other one for gene-level analysis using multiple mutations within a gene (gSAME).
+Depends: R (>= 3.4.0)
+License: FHCRC
+Encoding: UTF-8
+LazyData: true
+Imports: VGAM, basic
+RoxygenNote: 6.0.1
