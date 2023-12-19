@@ -48,12 +48,14 @@ fit_ss1 <- mle.bb(A1, D1)
 estss_pi <- c(fit_ss0$pi, fit_ss1$pi)
 estss_varphi <- c(fit_ss0$rho, fit_ss1$rho)
 
+p <- ncol(mutM)
+
 spesen_est <- matrix(NA, p, 2)
 for(j in 1:p){
   O <- mutM[, j] 
   D <- Depth_tumor[, j]
   A <- Alter_tumor[, j]
-  spesen_est[j, ] <- estss(A, D, O, estss_pi, estss_varphi)
+  spesen_est[j, ] <- SAME::estss(A, D, O, estss_pi, estss_varphi)
 }
 
 
@@ -90,7 +92,7 @@ nA <- A[D < d0]
 nTotal <- D[D < d0]
 if(length(nA) > 0){
   log01 <- capture.output({
-    fit01 <- bb.mix(nA, nTotal)
+    fit01 <- bb.mix2(nA, nTotal)
   })
   mix_2bb <- fit01$theta[1:4]
 }else{

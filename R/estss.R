@@ -7,7 +7,7 @@
 #' @param pi The mean parameters for the beta-binomial distributions when the true somatic mutation value equals 0 or 1.
 #' @param varphi The over-dispersion parameters for the beta-binomial distributions when the true somatic mutation value equals 0 or 1.
 #'
-#' @return The estimated specificity and sensitivity for the somatic mutaiton.
+#' @return The estimated specificity and sensitivity for the somatic mutation.
 
 
 
