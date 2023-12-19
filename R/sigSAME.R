@@ -49,7 +49,7 @@ sigSAME <- function(O, D, A, d0 = 20, min_altcount = 1,
   if(is.null(mix_2bb)){
     if(length(nA) > 0){
       log01 <- capture.output({
-        fit01 <- bb.mix(nA,nTotal)
+        fit01 <- bb.mix2(nA,nTotal)
       })
       mix_2bb <- fit01$theta[1:4]
     }else{
