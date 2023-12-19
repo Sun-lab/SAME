@@ -55,7 +55,7 @@ for(j in 1:p){
   O <- mutM[, j] 
   D <- Depth_tumor[, j]
   A <- Alter_tumor[, j]
-  spesen_est[j, ] <- SAME::estss(A, D, O, estss_pi, estss_varphi)
+  spesen_est[j, ] <- estss(A, D, O, estss_pi, estss_varphi)
 }
 
 
